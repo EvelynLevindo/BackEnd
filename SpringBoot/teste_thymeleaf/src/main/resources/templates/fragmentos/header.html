@@ -1,0 +1,12 @@
+<header th:fragment="header">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <nav>
+        <div class="nav">
+            <a th:href="@{/}">Home</a> <!-- Link para a raiz -->
+            <!-- Link para sobre, produto e conteúdo usado em TH -->
+            <a th:href="@{/sobre}">Sobre</a>
+            <a th:href="@{/produto}">Produtos</a>
+            <a th:href="@{/contato}">Contato</a>
+        </div>
+    </nav>
+</header>
