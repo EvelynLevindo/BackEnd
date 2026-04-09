@@ -111,7 +111,7 @@ app.delete("/contato/:grupo/:index", (req, res) => {
     salvarDados(dados);
 
     res.json({
-        menagem: "Contato Excluído com Sucesso!",
+        mensagem: "Contato Excluído com Sucesso!",
         contato: removido[0]
     });
 });
