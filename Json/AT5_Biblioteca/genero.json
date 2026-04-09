@@ -1,0 +1,28 @@
+{
+  "romance": [
+    {
+      "titulo": "É Assim Que Começa",
+      "autor": "Collen Hoover"
+    },
+    {
+      "titulo": "É Assim Que Acaba",
+      "autor": "Collen Hoover"
+    }
+  ],
+  "misterio": [
+    {
+        "titulo": "Jantar Secreto",
+        "autor": "Raphael Montes"
+    }
+  ],
+  "ficcao": [
+    {
+      "titulo": "Duna",
+      "autor": "Frank Herbert"
+    },
+    {
+      "titulo": "Duna 2",
+      "autor": "Frank Herbert"
+    }
+  ]
+}
