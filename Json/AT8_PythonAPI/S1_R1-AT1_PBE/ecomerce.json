@@ -1,0 +1,14 @@
+[
+    {
+        "item": "tonalizante",
+        "preco": "15",
+        "quantidade": "1",
+        "tamanho": "12",
+        "cor": "vermelho",
+        "marca": "salon line",
+        "categoria": "cosmetico",
+        "data_pedido": "14/04/2026",
+        "entregue": true,
+        "distribuidora": "mercado livre"
+    }
+]
