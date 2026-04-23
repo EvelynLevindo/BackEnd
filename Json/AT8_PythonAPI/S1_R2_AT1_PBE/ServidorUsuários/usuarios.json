@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Evelyn",
+        "sobrenome": "Levindo",
+        "genero": "Feminino",
+        "nacionalidade": "Brasileira",
+        "telefone": "19123456789",
+        "email": "leviva@gmail.com",
+        "cpf": "12345678900",
+        "idade": 17,
+        "data_cadastro": "2026-04-14",
+        "cliente_ativo": true
+    }
+]

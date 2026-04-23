@@ -1,0 +1,28 @@
+[
+    {
+        "item": "Tonalizante",
+        "preco": 15.00,
+        "quantidade": 200,
+        "peso": 500,
+        "cor": "Vermelho",
+        "marca": "Salon Line",
+        "categoria": "Cosmético",
+        "data_reabastecimento": "2026-04-22",
+        "entregue": true,
+        "distribuidora": "Mercado Livre"
+
+    },
+
+    {
+        "item": "Chocolate",
+        "preco": 7.00,
+        "quantidade": 34,
+        "peso": 90,
+        "cor": "---",
+        "marca": "Cacau Show",
+        "categoria": "Comida",
+        "data_reabastecimento": "2026-04-11",
+        "entregue": true,
+        "distribuidora": "Mercado Livre"
+    }
+]

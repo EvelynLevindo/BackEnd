@@ -1,0 +1,9 @@
+[
+    {
+        "codigoProd": 1,
+        "cliente": "Evelyn Levindo",
+        "produto": ["Tonalizante", "Chocolate"],
+        "totalPedido": 22.00,
+        "entregue": true
+    }
+]

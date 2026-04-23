@@ -1,0 +1,27 @@
+const fs = require("fs");
+const info = fs.readFileSync("produtos.json", "utf-8");
+const produtos = JSON.parse(info);
+
+console.log("=========== PRODUTOS ============\n");
+console.log(`Produto: ${produtos[0].item}`);
+console.log(`Preço: R$${produtos[0].preco}`);
+console.log(`Estoque: ${produtos[0].quantidade}`);
+console.log(`Peso: ${produtos[0].peso}g`);
+console.log(`Cor: ${produtos[0].cor}`);
+console.log(`Marca: ${produtos[0].marca}`);
+console.log(`Categoria: ${produtos[0].categoria}`);
+console.log(`Reabastecimento: ${produtos[0].data_reabastecimento}`);
+console.log(`Pedido Entregue: ${produtos[0].entregue}`);
+console.log(`Distribuidora: ${produtos[0].distribuidora}`);
+console.log("\n==================================\n");
+console.log(`Produto: ${produtos[1].item}`);
+console.log(`Preço: R$${produtos[1].preco}`);
+console.log(`Estoque: ${produtos[1].quantidade}`);
+console.log(`Peso: ${produtos[1].peso}g`);
+console.log(`Cor: ${produtos[1].cor}`);
+console.log(`Marca: ${produtos[1].marca}`);
+console.log(`Categoria: ${produtos[1].categoria}`);
+console.log(`Reabastecimento: ${produtos[1].data_reabastecimento}`);
+console.log(`Pedido Entregue: ${produtos[1].entregue}`);
+console.log(`Distribuidora: ${produtos[1].distribuidora}`);
+console.log("\n==================================\n");
