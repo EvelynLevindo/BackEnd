@@ -4,10 +4,10 @@ const readline = require("readline");
 const rl = readline.createInterface({input: process.stdin, output: process.stdout,});
 
 // Função para buscar os dados na API
-async function buscarRacaDeGato(raca) {
+async function racaGato(raca) {
   const url = `https://api.thecatapi.com/v1/breeds/search?q=${raca}`;
 
-  try {
+  try 
     console.log("\nBuscando informações, aguarde...");
 
     // Faz a requisição da API
