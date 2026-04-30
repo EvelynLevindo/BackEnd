@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela Funcionários</title>
-    <style>
+    <style> 
+    /* Estilização da tabela */
         table {
             border-collapse: collapse;
             width: 30%;
@@ -21,19 +22,27 @@
     </style>
 </head>
 <body>
+
+    <!-- Montagem da Tabela -->
     <table>
+
+        <!-- Cabeçalho da Tabela -->
         <tr>
             <th>Nome</th>
             <th>Cargo</th>
             <th>Salário</th>
         </tr>
     <?php 
+
+        // Declaração das Matrizes
         $funcionarios = [
             ["nome" => "Ana", "cargo" => "Analista", "salario" => 4000],
             ["nome" => "Carlos", "cargo" => "Desenvolvedor", "salario" => 2500],
             ["nome" => "Mariana", "cargo" => "Gerente", "salario" => 10000],
             ["nome" => "João", "cargo" => "Desenvolvedor", "salario" => 2500]
         ];
+
+        // Leitura das informações sobre os Funcionários
         foreach ($funcionarios as $f) {
             echo "<tr> <td>" . $f["nome"] . "</td> <td>" . $f["cargo"] . "</td> <td>" . $f["salario"] . "</td> </tr>";
         }
