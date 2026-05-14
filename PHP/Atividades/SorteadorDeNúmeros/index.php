@@ -13,9 +13,9 @@
             <?php
                 $numeros = []; // Array que vai guardar os números sorteados
                 for ($i = 0; $i < 6; $i++) { // Vai contolar a quantidade de números sorteados
-                    $numero = rand(1, 60); // Vai sortear números aleatórios de 1 a 60
+                    $numero = mt_rand(1, 60); // Vai sortear números aleatórios de 1 a 60
                     while (in_array($numero, $numeros)) { // Enquanto o último número sorteado for igual a um número dentro do array ele ficará em looping
-                        $numero = rand(1, 60);
+                        $numero = mt_rand(1, 60);
                     }
                     $numeros [] = $numero; // Armazenando o número sortado no array
                 }

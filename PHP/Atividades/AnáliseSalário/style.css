@@ -1,0 +1,102 @@
+/* Paleta: 042A2B (Escuro), 5EB1BF (Médio), CDEDF6 (Fundo), EF7B45 (Destaque), D84727 (Alerta) */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #CDEDF6;
+    color: #042A2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    color: #042A2B;
+    margin-top: 0;
+    border-bottom: 2px solid #5EB1BF;
+    padding-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 2px solid #5EB1BF;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #042A2B;
+}
+
+p {
+    font-size: 0.85rem;
+    color: #5EB1BF;
+    margin: 0;
+}
+
+input[type="submit"] {
+    background-color: #EF7B45;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #D84727;
+}
+
+.resultado {
+    margin-top: 25px;
+    padding: 15px;
+    border-left: 5px solid #5EB1BF;
+    background-color: #f0f9ff;
+    border-radius: 4px;
+}
+
+.resultado h3 {
+    margin-top: 0;
+    color: #042A2B;
+}
+
+.aviso {
+    color: #D84727;
+    background-color: #ffeaea;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid #D84727;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
