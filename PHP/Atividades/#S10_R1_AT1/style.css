@@ -1,0 +1,96 @@
+/* Paleta original: 55DDE0, 33658A, F6AE2D, F26419 */
+
+:root {
+    --ciano: #55DDE0;
+    --azul: #33658A;
+    --amarelo: #F6AE2D;
+    --laranja: #F26419;
+    --fundo: #ffffff;
+    --texto: #333333;
+}
+
+/* Tons mais escuros das mesmas cores para o Dark Mode */
+.modo-escuro {
+    --ciano: #2E7A7C;
+    --azul: #1C374B;
+    --amarelo: #8E641A;
+    --laranja: #8C3A0E;
+    --fundo: #1a1a1a;
+    --texto: #dddddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estrutura para fixar o footer no final */
+body {
+    font-family: sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa a altura toda da tela */
+}
+
+/* Estilo do Header */
+.meu-header {
+    background-color: var(--azul);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.meu-header a {
+    color: var(--ciano);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Conteúdo principal */
+.container {
+    flex: 1; /* Faz essa parte crescer e empurrar o footer para baixo */
+    width: 90%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 3px solid var(--azul);
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+    border: 1px solid var(--azul);
+}
+
+input[type="submit"] {
+    background-color: var(--laranja);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+/* Botão da Tela Inicial */
+button {
+    background-color: var(--amarelo);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Estilo do Footer */
+.meu-footer {
+    background-color: var(--azul);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Garante que ele fique no final do flex-container */
+}
