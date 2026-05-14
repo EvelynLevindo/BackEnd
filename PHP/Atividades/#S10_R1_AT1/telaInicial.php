@@ -1,5 +1,5 @@
 <?php 
-    // Sempre inicie a sessão no topo do arquivo
+    // Sempre inicia a sessão no topo do arquivo
     session_start();
 
     // Verifica se os dados foram enviados via POST
@@ -21,7 +21,9 @@
     <script>alert('Dados salvos com sucesso!');</script>
     
     <?php 
-        require "Header.php";
+        require "Header.php"; // Chamndo o header para a página
+
+        // Vai verificar se tem as informações necessárias do cliente para imprimir na tela a mensagem
         if (isset($_SESSION['nome'])) {
             echo "<h2>Bem-Vindo(a), " . htmlspecialchars($_SESSION['nome']) . "!</h2>";
         } else {
@@ -31,6 +33,6 @@
     
     <button>Modo Escuro</button>
     
-    <?php require "Footer.php"; ?> 
+    <?php require "Footer.php"; ?> <!-- Chamando o footer -->
 </body>
 </html>

@@ -1,0 +1,74 @@
+/* Paleta de Cores: #FFF05A, #FFD25A, #FFAA5A, #FF785A, #191919 */
+body {
+    background-color: #191919;
+    color: #FFF05A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #252525;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 2px solid #FF785A;
+    max-width: 500px;
+    }
+
+h1 {
+    color: #FFD25A;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sorteador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.numeros {
+    background: linear-gradient(135deg, #FFAA5A, #FF785A);
+    color: #191919;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 120, 90, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.numeros:hover {
+    transform: scale(1.1);
+    background: #FFF05A;
+}
+
+.button-sortear {
+    display: inline-block;
+    background-color: transparent;
+    color: #FFD25A;
+    padding: 10px 25px;
+    border: 2px solid #FFD25A;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.button-sortear:hover {
+    background-color: #FFD25A;
+    color: #191919;
+}

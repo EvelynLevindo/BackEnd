@@ -10,8 +10,10 @@
     <title>Cadastro de Cliente</title>
 </head>
 <body>
-    <?php require "Header.php"; ?>
+    <?php require "Header.php"; ?>  <!-- Copiando as informações do header para está página -->
     <div class="container">
+
+        <!-- Formulário para o cadastro do usuário -->
         <h2>Cadastro</h2>
         <form method="post" action="telaInicial.php">
             <label>Nome:</label>
@@ -27,6 +29,6 @@
         </form>
     </div>
 
-    <?php require "Footer.php"; ?>
+    <?php require "Footer.php"; ?> <!-- Copiando as informações do footer para está página -->
 </body>
 </html>

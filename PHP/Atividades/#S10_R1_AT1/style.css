@@ -1,6 +1,5 @@
 /* Paleta original: 55DDE0, 33658A, F6AE2D, F26419 */
-
-:root {
+ :root { /* Salvando as cores principais para não ter que ficar copiando e colando */
     --ciano: #55DDE0;
     --azul: #33658A;
     --amarelo: #F6AE2D;
@@ -9,8 +8,8 @@
     --texto: #333333;
 }
 
-/* Tons mais escuros das mesmas cores para o Dark Mode */
-.modo-escuro {
+/* Tons mais escuros das mesmas cores para o modo escuro */
+.modo-escuro { 
     --ciano: #2E7A7C;
     --azul: #1C374B;
     --amarelo: #8E641A;
@@ -35,7 +34,7 @@ body {
     min-height: 100vh; /* Ocupa a altura toda da tela */
 }
 
-/* Estilo do Header */
+/* Estilização do header */
 .meu-header {
     background-color: var(--azul);
     color: white;
@@ -52,7 +51,7 @@ body {
 
 /* Conteúdo principal */
 .container {
-    flex: 1; /* Faz essa parte crescer e empurrar o footer para baixo */
+    flex: 1; /* Deixa o footer lá em baixo */
     width: 90%;
     max-width: 400px;
     margin: 30px auto;
@@ -76,7 +75,7 @@ input[type="submit"] {
     border: none;
 }
 
-/* Botão da Tela Inicial */
+/* Botão tela inicial */
 button {
     background-color: var(--amarelo);
     padding: 10px 20px;
@@ -86,11 +85,11 @@ button {
     margin: 20px auto;
 }
 
-/* Estilo do Footer */
+/* Estilização do footer */
 .meu-footer {
     background-color: var(--azul);
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: auto; /* Garante que ele fique no final do flex-container */
+    margin-top: auto;
 }

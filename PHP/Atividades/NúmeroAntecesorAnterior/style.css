@@ -1,0 +1,132 @@
+/* Importando uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #C2F9BB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinhado ao topo com padding */
+    padding-top: 50px;
+    min-height: 100vh;
+    color: #20063B;
+}
+
+/* Container principal */
+.tela {
+    background-color: #9AD1D4;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(32, 6, 59, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    margin-bottom: 2rem;
+    color: #20063B;
+}
+
+/* Formulário e efeito flutuante da label */
+.form form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #62C370;
+    border-radius: 8px;
+    background: white;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input-label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    transition: 0.3s;
+    pointer-events: none;
+    color: #20063B;
+    opacity: 0.6;
+}
+
+.input:focus ~ .input-label,
+.input:not(:placeholder-shown) ~ .input-label {
+    top: -25px;
+    left: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* Botão Enviar */
+.button {
+    margin-top: 1.5rem;
+    padding: 12px;
+    background-color: #CC3363;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #20063B;
+    transform: scale(1.02);
+}
+
+/* --- Estilização da tabela de exibição dos resultados --- */
+
+table {
+    width: 90%;
+    max-width: 450px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+}
+
+th {
+    background-color: #62C370;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #20063B;
+    border-bottom: 1px solid #eee;
+}
+
+/* Destaque para o número central na tabela */
+td:nth-child(2) {
+    background-color: #f9f9f9;
+    color: #CC3363; /* Cor rosa para o número principal */
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
