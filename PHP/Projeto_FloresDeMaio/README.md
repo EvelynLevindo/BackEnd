@@ -115,3 +115,46 @@ Os Requisitos Não Funcionais especificam os critérios de qualidade, restriçõ
 * **Moderação de Avaliações:**
     * Painel de monitoramento do *feedback* pós-compra.
     * Possibilita identificar o que os clientes postaram e utilizar essas informações para atualizar o carrossel de depoimentos da página inicial.
+
+
+=======================================================================================
+
+
+    FLORES DE MAIO:
+- 80% Planejamento e Documentação.
+- 20% Código.
+Ferramentas: PHP, HTML, CSS, PostgreSQL.
+
+Passo a Passo:
+- Arquivo README sobre a descrição e desenvolvimento do projeto
+- Montagem de telas principais no Figma
+	- Escolha de paletas, fontes e desing (Retro ou Vintage)
+- Desenvolvimento do HTML e CSS
+- Programação em PHP
+- Montagem do banco de dados (dump)
+
+TELA --> Funcionário
+- Login ✅
+- Cadastro ✅
+- Dashboard Inicial
+- Gestão do Catálogo (CRUD)
+- Gestão de Pedidos (Fila Cronológica)
+- Central de Chat (Atendimento) --> usar a ideia do professor de levar ao zap zap
+- Painel de Moderação de Avaliações
+
+
+TELA --> Usuário
+- Login ✅
+- Cadastro ✅
+- Tela inicial (institucional e avaliações)
+- Catálogo
+- Assinaturas
+- Montador de buquê interativo
+- Carrinho de compras e chat interativo --> usar a ideia do professor de levar ao zap zap
+- Contatos e FAQ
+
+
+<a href="EditaProduto.php?id=<?php echo $produto\\\['id']; ?>" class="btn-edit">Editar</a>
+<a href="ExcluirProduto.php?id=<?php echo $produto\\\['id']; ?>" class="btn-delete">Excluir</a>
+
+Mobile: Sistema de entregas de controle de entregas
