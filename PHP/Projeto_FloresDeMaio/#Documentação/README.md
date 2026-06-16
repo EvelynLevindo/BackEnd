@@ -1,84 +1,88 @@
-# Documento de Requisitos
-## Projeto: Flor de Maio — "Poesia Viva"
-##### Prototipagem: 
+#Flor de Maio — "Poesia Viva"
 
 ---
 
-## 1. Visão Geral
+## 1. Escopo e Contexto da Organização
 
-O projeto **Flor de Maio** é um ecommerce focado em uma experiência simples de compra e gerenciamento de estoque/pedidos, sem complexidades logísticas ou de alta segurança.
+O projeto **Flor de Maio** consiste em uma plataforma de e-commerce voltada para a comercialização de arranjos e flores, com uma proposta de valor baseada em memórias afetivas e poesia. 
 
-* **Identidade Visual:** Estética *Vintage* (cores nostálgicas e fontes serifadas).
-* **Back-end:** PHP.
-* **Front-end:** HTML5 e CSS3.
-* **Banco de Dados:** PostgreSQL.
+**Objetivo do Sistema:** Fornecer uma experiência de compra simples para clientes e um painel de gerenciamento de estoque e pedidos para funcionários, eliminando complexidades logísticas avançadas de pagamentos reais (simulação).
 
-### Tabela de Controle de Acesso
-| Perfil | Telas Acessíveis | Objetivo Principal |
+---
+
+## 2. Sistema Geral
+
+O sistema define o controle de acesso com base em dois perfis de usuários com escopos separados:
+
+| Perfil | Nível de Acesso | Responsabilidades no Sistema |
 | :--- | :--- | :--- |
-| **Cliente** | Home, Catálogo, Carrinho, Contato, Login/Cadastro | Navegar, escolher produtos e simular a compra. |
-| **Funcionário** | Dashboard, Controle de Catálogo, Fila de Pedidos, Avaliações | Cadastrar produtos, atualizar pedidos e ler feedbacks. |
+| **Cliente** | Externo | Navegação no catálogo, adição de itens ao carrinho, simulação de checkout e envio de feedback. |
+| **Funcionário** | Interno (Admin) | Manutenção do catálogo (CRUD), alteração de status de pedidos na fila e monitoramento de avaliações de clientes. |
 
 ---
 
-## 2. Elementos Globais (Layout)
+## 3. Suporte e Recursos
 
-* **Área do Cliente:** Header com logotipo (link para a Home), links para *Catálogo* e *Contato*, ícones para *Carrinho* e *Perfil/Login*. Footer simples com o texto fixo: `Flor de Maio - Poesia Viva`.
-* **Área do Funcionário:** Header com logotipo centralizado e botão de *Sair (Logout)*. Footer idêntico ao do cliente.
+A infraestrutura tecnológica para garantir a operação e a identidade visual do sistema é composta por:
 
----
-
-## 3. Arquitetura de Telas — Visão do Cliente
-
-### 3.1. Tela Inicial (Home)
-* **História:** Texto curto e poético sobre a floricultura.
-* **Destaques:** Vitrine simples com 3 ou 4 produtos do catálogo.
-* **Depoimentos:** Exibição de comentários reais de clientes puxados direto do banco de dados.
-
-### 3.2. Catálogo de Produtos
-* **Listagem:** Exibição dos produtos em grade (card com foto, nome, preço e botão "Ver Detalhes").
-* **Página do Produto:** Detalhes do item (descrição, tipo de flor) e o botão **"Adicionar ao Carrinho"**.
-
-### 3.3. Carrinho de Compras e Checkout
-* **Listagem do Carrinho:** Exibe os itens adicionados, a quantidade, o valor individual e o valor total acumulado.
-* **Finalização:** Botão **"Confirmar Pedido"**.
-> **Regra Acadêmica:** O pagamento é apenas uma simulação. Ao clicar, o sistema gera o pedido no banco com o status `Pendente` e limpa o carrinho da sessão.
-
-### 3.4. Contato e Avaliações
-* **Informações:** Links fictícios de redes sociais e e-mail de contato.
-* **Formulário de Feedback:** Campos para *Nome*, *Nota (1 a 5)* e *Comentário*. O envio grava os dados diretamente no banco.
-
-### 3.5. Cadastro e Login
-* Formulário básico para autenticação. A validação diferencia se o usuário é Cliente ou Funcionário e faz o redirecionamento correto.
+* **Linguagem Backend:** PHP (processamento no lado do servidor e controle de sessões).
+* **Linguagem Frontend:** HTML5 e CSS3.
+* **Banco de Dados:** PostgreSQL (armazenamento relacional seguro).
+* **Identidade Visual (UI/UX):** Estética "Vintage".
+    * **Paleta:** Vinho Nostálgico (`#84434B`), Verde Oliva (`#7C8D75`), Rosa Antigo (`#C9918E`), Branco Pérola (`#F9F6EE`).
+    * **Tipografia:** `Libre Caslon Text` (Títulos), `Courier Prime` (Corpo), `Source Sans 3` (Interface).
 
 ---
 
-## 4. Arquitetura de Telas — Visão do Funcionário (Painel Admin)
+## 4. Operação: Requisitos do Sistema
 
-### 4.1. Dashboard Admin
-* Tela central de controle com cartões de acesso rápido para as três funções administrativas:
-  1. Gerenciar Catálogo
-  2. Gerenciar Pedidos
-  3. Ver Avaliações
+O funcionamento do software foi feito através de requisitos rigorosos para atender às necessidades dos usuários.
 
-### 4.2. Gestão do Catálogo (CRUD)
-* **Visualização:** Tabela com todos os produtos cadastrados e botões explícitos para **Editar** e **Excluir**.
-* **Formulário:** Botão *"Adicionar Novo Produto"* que abre campos para: *Nome*, *Preço*, *Descrição*, *Categoria* e *URL da Imagem* (usar links de imagens hospedadas para evitar a complexidade de upload de arquivos via PHP).
+### 4.1. Requisitos Funcionais (RF)
+* **RF01:** O sistema deve permitir o cadastro e autenticação de usuários, diferenciando a interface entre Cliente e Funcionário.
+* **RF02:** O sistema deve exibir um catálogo de produtos com foto, nome e preço.
+* **RF03:** O cliente deve poder adicionar produtos a um carrinho de compras temporário e visualizar o valor total.
+* **RF04:** O sistema deve simular o fechamento de um pedido, gerando um registro com status `Pendente`.
+* **RF05:** O cliente deve conseguir enviar notas (1 a 5) e comentários via formul
+* **RF06:** O funcionário deve ter acesso a um CRUD (Criar, Ler, Atualizar, Excluir) completo para o catálogo de produtos.
+* **RF07:** O funcionário deve poder visualizar a fila de pedidos em ordem cronológica e alterar o status de `Pendente` para `Concluído`.
 
-### 4.3. Gestão de Pedidos
-* **Fila de Pedidos:** Listagem em ordem cronológica de chegada contendo: ID do pedido, Nome do cliente, Itens comprados, Valor Total e Status atual.
-* **Alteração de Status:** Um botão simples para alternar o status do pedido de **`Pendente`** para **`Concluído`**.
-
-### 4.4. Visualização de Avaliações
-* Tela para leitura das mensagens e notas que os clientes enviaram através da página de Contato.
+### 4.2. Requisitos Não Funcionais (RNF)
+* **RNF01 (Desempenho/Arquitetura):** O carrinho de compras deve ser gerenciado puramente via Sessão (`$_SESSION`) no PHP, sem sobrecarregar o banco de dados com tabelas temporárias.
+* **RNF02 (Usabilidade):** O sistema não deve exigir upload complexo de imagens; os produtos utilizarão URLs de imagens já hospedadas externamente.
+* **RNF03 (Controle de Sessão):** O acesso a qualquer arquivo localizado dentro da pasta `/admin/` deve ser restrito e verificado obrigatoriamente por um script validador (`auth_check.php`). Qualquer tentativa de acesso direto via URL por utilizadores não autenticados ou sem o perfil 'admin' deve resultar no redirecionamento imediato para a página de login.
+* **RNF04 (Proteção de Credenciais):** Todas as senhas de utilizadores gravadas na tabela `usuarios` devem ser obrigatoriamente criptografadas antes da sua inserção no banco de dados, utilizando a função nativa `password_hash()` do PHP com o algoritmo seguro padrão do sistema (BCRYPT ou equivalente).
+* **RNF05 (Integridade Referencial):** O banco de dados PostgreSQL deve impor restrições estritas de chaves estrangeiras (`FOREIGN KEY`), utilizando regras como `ON DELETE RESTRICT` para impedir a exclusão acidental de produtos ou utilizadores que possuam vínculos históricos em pedidos realizados.
+* **RNF06 (Modularidade do Código):** O código fonte da aplicação deve ser estruturado de forma modular e organizada em diretórios específicos (`config/`, `includes/`, `admin/`, `css/`). Elementos repetitivos de interface devem ser unificados em arquivos isolados (`header.php` e `footer.php`) e incluídos dinamicamente via `require_once`, eliminando redundâncias de código e facilitando futuras expansões.
+* **RNF07 (Persistência do Status):** O status de um pedido alterado no painel administrativo deve ter persistência garantida, atualizando o estado do registro diretamente no banco de dados de modo a manter a fila cronológica.
 
 ---
 
-## 5. Diretrizes Técnicas de Implementação
+## 5. Arquitetura de Telas e Navegação
 
-### 5.1. Carrinho de Compras via Sessão (PHP)
-O carrinho pode ser mantido puramente na memória da sessão do servidor enquanto o cliente navega, sem necessidade de tabelas temporárias no banco.
+O mapa do site está dividido nas seguintes rotas operacionais:
 
-### 5.2. Controle de Acesso Simplificado
-Para fins acadêmicos, a diferenciação de perfis será feita por uma coluna tipo_usuario ('cliente' ou 'admin') na tabela de usuários.
-No início de cada arquivo da pasta administrativa, valida-se o acesso.
+### 5.1. Ambiente do Cliente
+* **`index.php` (Home):** História poética da marca, vitrine de destaques (4 produtos) e mural de últimos depoimentos.
+* **`catalogo.php` e `produto.php`:** Grade completa de arranjos florais e página de detalhes técnicos para adição ao carrinho.
+* **`carrinho.php`:** Resumo de compras, cálculos de subtotal e simulação de checkout seguro.
+* **`contato.php`:** SAC e formulário de satisfação com armazenamento direto.
+* **`login.php`:** Porta de entrada unificada para clientes e administração.
+
+### 5.2. Ambiente Administrativo (`/admin/`)
+* **`dashboard.php`:** Painel central de controle com acesso rápido aos módulos operacionais.
+* **`catalogo.php`:** Interface administrativa contendo a tabela de produtos e formulário para cadastro/edição.
+* **`pedidos.php`:** Fila de expedição e logística, controle de pendências.
+* **`avaliacoes.php`:** Auditoria de qualidade e leitura dos feedbacks recebidos.
+
+---
+
+## 6. Modelagem de Dados
+
+A rastreabilidade dos dados é garantida por um modelo relacional normalizado:
+
+* **`usuarios`**: Entidade central de autenticação (id, nome, email, senha, tipo_usuario).
+* **`produtos`**: Armazena os ativos do e-commerce (id, nome, preco, descricao, categoria, url_imagem).
+* **`pedidos`**: Cabeçalho de compras consolidadas (id, usuario_id, valor_total, status, data_pedido).
+* **`itens_pedido`**: Relacionamento 1:N que detalha o que compõe cada pedido (id, pedido_id, produto_id, quantidade, preco_unitario).
+* **`avaliacoes`**: Entidade de auditoria e qualidade com as notas dos clientes (id, nome, nota, comentario, data_envio).
