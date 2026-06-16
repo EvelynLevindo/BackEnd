@@ -44,7 +44,7 @@ O funcionamento do software foi feito através de requisitos rigorosos para aten
 * **RF02:** O sistema deve exibir um catálogo de produtos com foto, nome e preço.
 * **RF03:** O cliente deve poder adicionar produtos a um carrinho de compras temporário e visualizar o valor total.
 * **RF04:** O sistema deve simular o fechamento de um pedido, gerando um registro com status `Pendente`.
-* **RF05:** O cliente deve conseguir enviar notas (1 a 5) e comentários via formul
+* **RF05:** O cliente deve conseguir enviar notas (1 a 5) e comentários via formulário.
 * **RF06:** O funcionário deve ter acesso a um CRUD (Criar, Ler, Atualizar, Excluir) completo para o catálogo de produtos.
 * **RF07:** O funcionário deve poder visualizar a fila de pedidos em ordem cronológica e alterar o status de `Pendente` para `Concluído`.
 
